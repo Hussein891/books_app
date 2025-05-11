@@ -1,4 +1,6 @@
+import 'package:books_app/core/uitel/assets.dart';
 import 'package:books_app/features/home/data/presentation/view/widget/custom_app_bar.dart';
+import 'package:books_app/features/home/data/presentation/view/widget/custom_lsit_view_item.dart';
 
 import 'package:flutter/material.dart';
 
@@ -7,6 +9,6 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [const CustomAppBar()]);
+    return Column(children: [const CustomAppBar(), CustomListViewItem()]);
   }
 }
