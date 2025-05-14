@@ -1,3 +1,4 @@
+import 'package:books_app/core/uitel/assets.dart';
 import 'package:books_app/core/uitel/styles.dart';
 import 'package:books_app/features/home/data/presentation/view/widget/custom_app_bar.dart';
 import 'package:books_app/features/home/data/presentation/view/widget/featured_list_view.dart';
@@ -19,8 +20,33 @@ class HomeViewBody extends StatelessWidget {
             FeaturdBooksListView(),
             const SizedBox(height: 40),
             Text('Bist Seller', style: Styles.titleMedium),
+            BistSellerListView(),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class BistSellerListView extends StatelessWidget {
+  const BistSellerListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 120,
+      child: Row(
+        children: [
+          AspectRatio(
+            aspectRatio: 2.5 / 4,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                image: DecorationImage(image: AssetImage(AssetsData.testImage)),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
