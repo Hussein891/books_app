@@ -19,7 +19,7 @@ class HomeViewBody extends StatelessWidget {
             const CustomAppBar(),
             FeaturdBooksListView(),
             const SizedBox(height: 40),
-            Text('Bist Seller', style: Styles.titleMedium),
+            Text('Bist Seller', style: Styles.titleStyle18),
             BistSellerListView(),
           ],
         ),
