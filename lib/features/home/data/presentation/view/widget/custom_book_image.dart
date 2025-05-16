@@ -1,8 +1,8 @@
 import 'package:books_app/core/uitel/assets.dart';
 import 'package:flutter/cupertino.dart';
 
-class FeaturedListViewItem extends StatelessWidget {
-  const FeaturedListViewItem({super.key});
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,4 @@
-import 'package:books_app/features/home/data/presentation/view/widget/custom_lsit_view_item.dart';
+import 'package:books_app/features/home/data/presentation/view/widget/custom_book_image.dart';
 import 'package:flutter/cupertino.dart';
 
 class FeaturdBooksListView extends StatelessWidget {
@@ -12,7 +12,7 @@ class FeaturdBooksListView extends StatelessWidget {
         itemCount: 8,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return FeaturedListViewItem();
+          return CustomBookImage();
         },
       ),
     );
