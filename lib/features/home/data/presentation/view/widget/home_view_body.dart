@@ -12,7 +12,7 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -20,6 +20,7 @@ class HomeViewBody extends StatelessWidget {
             FeaturdBooksListView(),
             const SizedBox(height: 40),
             Text('Bist Seller', style: Styles.titleStyle18),
+            const SizedBox(height: 20),
             BistSellerListView(),
           ],
         ),
@@ -45,6 +46,20 @@ class BistSellerListView extends StatelessWidget {
                 image: DecorationImage(image: AssetImage(AssetsData.testImage)),
               ),
             ),
+          ),
+          const SizedBox(width: 30),
+          Column(
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .5,
+                child: Text(
+                  'Harry Potter and the Goblet of Fire',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: Styles.titleStyle2o,
+                ),
+              ),
+            ],
           ),
         ],
       ),
