@@ -1,9 +1,10 @@
+import 'package:books_app/core/uitel/app_router.dart';
 import 'package:books_app/core/uitel/assets.dart';
-import 'package:books_app/features/home/data/presentation/view/home_view.dart';
 import 'package:books_app/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/get_navigation.dart';
-import 'package:get/utils.dart';
+import 'package:go_router/go_router.dart';
+// import 'package:get/get_navigation/get_navigation.dart';
+// import 'package:get/utils.dart';
 
 class SplashViewBady extends StatefulWidget {
   const SplashViewBady({super.key});
@@ -56,11 +57,13 @@ class _SplashViewBadyState extends State<SplashViewBady>
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
-      Get.to(
-        () => const HomeView(),
-        transition: Transition.fade,
-        duration: Duration(microseconds: 250),
-      );
+      // Get.to(
+      //   () => const HomeView(),
+      //   transition: Transition.fade,
+      //   duration: Duration(microseconds: 250),
+      // );
+      // ignore: use_build_context_synchronously
+      GoRouter.of(context).push(AppRouter.kHomeVeiw);
     });
   }
 }
