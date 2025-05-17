@@ -1,3 +1,5 @@
+import 'package:books_app/core/uitel/styles.dart';
+import 'package:books_app/features/home/presentation/view/widget/bist_seller_list_view_item.dart';
 import 'package:books_app/features/search/presntation/view/widget/custom_searche_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +10,34 @@ class SearchViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: Column(children: [CustomSearchTextField()]),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CustomSearchTextField(),
+          const SizedBox(height: 16),
+          Text('Search Result', style: Styles.titleStyle18),
+          const SizedBox(height: 16),
+          Expanded(child: SearchResultListView()),
+        ],
+      ),
+    );
+  }
+}
+
+class SearchResultListView extends StatelessWidget {
+  const SearchResultListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      padding: EdgeInsets.zero,
+      itemCount: 10,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          child: BookListViewItem(),
+        );
+      },
     );
   }
 }
