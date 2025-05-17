@@ -1,5 +1,6 @@
+import 'package:books_app/features/home/data/presentation/view/widget/book_details_section.dart';
 import 'package:books_app/features/home/data/presentation/view/widget/custom_book_details_app_bar.dart';
-import 'package:books_app/features/home/data/presentation/view/widget/custom_book_image.dart';
+import 'package:books_app/features/home/data/presentation/view/widget/simlar_bools_section.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -7,18 +8,24 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 30),
-      child: Column(
-        children: [
-          CustomBookDeteilsAppBar(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .1),
-            child: CustomBookImage(),
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            child: Column(
+              children: [
+                CustomBookDeteilsAppBar(),
+                BookDetailsSection(),
+                Expanded(child: const SizedBox(height: 50)),
+                SimlarBooksSection(),
+                const SizedBox(height: 40),
+              ],
+            ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
