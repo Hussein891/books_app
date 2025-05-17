@@ -1,4 +1,4 @@
-import 'package:books_app/features/home/data/presentation/view/widget/custom_book_image.dart';
+import 'package:books_app/features/home/presentation/view/widget/custom_book_image.dart';
 import 'package:flutter/cupertino.dart';
 
 class SimilarBooksListView extends StatelessWidget {

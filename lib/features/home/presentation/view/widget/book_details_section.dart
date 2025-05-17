@@ -1,7 +1,7 @@
 import 'package:books_app/core/uitel/styles.dart';
-import 'package:books_app/features/home/data/presentation/view/widget/book_action.dart';
-import 'package:books_app/features/home/data/presentation/view/widget/book_rating.dart';
-import 'package:books_app/features/home/data/presentation/view/widget/custom_book_image.dart';
+import 'package:books_app/features/home/presentation/view/widget/book_action.dart';
+import 'package:books_app/features/home/presentation/view/widget/book_rating.dart';
+import 'package:books_app/features/home/presentation/view/widget/custom_book_image.dart';
 import 'package:flutter/cupertino.dart';
 
 class BookDetailsSection extends StatelessWidget {

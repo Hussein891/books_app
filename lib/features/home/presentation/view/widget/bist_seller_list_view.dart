@@ -1,4 +1,4 @@
-import 'package:books_app/features/home/data/presentation/view/widget/bist_seller_list_view_item.dart';
+import 'package:books_app/features/home/presentation/view/widget/bist_seller_list_view_item.dart';
 import 'package:flutter/material.dart';
 
 class BistSellerListView extends StatelessWidget {

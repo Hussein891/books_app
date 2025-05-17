@@ -1,5 +1,5 @@
-import 'package:books_app/features/home/data/presentation/view/book_details_view.dart';
-import 'package:books_app/features/home/data/presentation/view/home_view.dart';
+import 'package:books_app/features/home/presentation/view/book_details_view.dart';
+import 'package:books_app/features/home/presentation/view/home_view.dart';
 import 'package:books_app/features/splash/presentation/views/splash.dart';
 import 'package:go_router/go_router.dart';
 

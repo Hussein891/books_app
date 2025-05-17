@@ -1,7 +1,7 @@
 import 'package:books_app/core/uitel/styles.dart';
-import 'package:books_app/features/home/data/presentation/view/widget/bist_seller_list_view.dart';
-import 'package:books_app/features/home/data/presentation/view/widget/custom_app_bar.dart';
-import 'package:books_app/features/home/data/presentation/view/widget/featured_list_view.dart';
+import 'package:books_app/features/home/presentation/view/widget/bist_seller_list_view.dart';
+import 'package:books_app/features/home/presentation/view/widget/custom_app_bar.dart';
+import 'package:books_app/features/home/presentation/view/widget/featured_list_view.dart';
 
 import 'package:flutter/material.dart';
 

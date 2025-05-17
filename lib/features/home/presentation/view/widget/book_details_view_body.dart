@@ -1,6 +1,6 @@
-import 'package:books_app/features/home/data/presentation/view/widget/book_details_section.dart';
-import 'package:books_app/features/home/data/presentation/view/widget/custom_book_details_app_bar.dart';
-import 'package:books_app/features/home/data/presentation/view/widget/simlar_bools_section.dart';
+import 'package:books_app/features/home/presentation/view/widget/book_details_section.dart';
+import 'package:books_app/features/home/presentation/view/widget/custom_book_details_app_bar.dart';
+import 'package:books_app/features/home/presentation/view/widget/simlar_bools_section.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {

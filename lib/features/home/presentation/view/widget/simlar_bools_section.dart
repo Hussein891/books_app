@@ -1,5 +1,5 @@
 import 'package:books_app/core/uitel/styles.dart';
-import 'package:books_app/features/home/data/presentation/view/widget/similar_books_list_view.dart';
+import 'package:books_app/features/home/presentation/view/widget/similar_books_list_view.dart';
 import 'package:flutter/cupertino.dart';
 
 class SimlarBooksSection extends StatelessWidget {
