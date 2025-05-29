@@ -1,9 +1,8 @@
-import 'package:books_app/consten.dart';
-import 'package:books_app/core/uitel/app_router.dart';
-import 'package:books_app/core/uitel/service_locator.dart';
-import 'package:books_app/features/home/data/repo/home_repo_impl.dart';
-import 'package:books_app/features/home/presentation/manger/featured%20books%20cubit/featured_books_cubit.dart';
-import 'package:books_app/features/home/presentation/manger/newset%20books%20cubit/newset_books_cubit_cubit.dart';
+import 'package:books_app/Features/home/data/repos/home_repo.dart';
+import 'package:books_app/Features/home/presentation/manger/featured_books_cubit/featured_books_cubit.dart';
+import 'package:books_app/Features/home/presentation/manger/newest_books_cubit/newset_books_cubit.dart';
+import 'package:books_app/core/utils/app_router.dart';
+import 'package:books_app/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,17 +20,22 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => FeaturedbooksCubit(getIt.get<HomeRepoImpl>()),
+          create:
+              (context) =>
+                  FeaturedBooksCubit(getIt.get<HomeRepo>())
+                    ..fetchFeaturedBooks(),
         ),
         BlocProvider(
-          create: (context) => NewsetBooksCubitCubit(getIt.get<HomeRepoImpl>()),
+          create:
+              (context) =>
+                  NewsetBooksCubit(getIt.get<HomeRepo>())..fetchNewestBooks(),
         ),
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: kPraimaryColor,
+          //scaffoldBackgroundColor: kPraimaryColor,
           textTheme: GoogleFonts.montserratTextTheme(
             ThemeData.dark().textTheme,
           ),
