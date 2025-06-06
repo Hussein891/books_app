@@ -1,4 +1,5 @@
 import 'package:books_app/Features/home/data/models/book_model/book_model.dart';
+import 'package:books_app/core/utils/function/launch_url.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/widgets/custom_button.dart';
@@ -27,7 +28,7 @@ class BooksAction extends StatelessWidget {
           Expanded(
             child: CustomButton(
               onPressed: () {
-                //  launchCustomUr(context, 'bookModel.volumeInfo.previewLink');
+                launchCustomUr(context, bookModel.volumeInfo.previewLink);
               },
               fontSize: 16,
               text: getText(bookModel),
